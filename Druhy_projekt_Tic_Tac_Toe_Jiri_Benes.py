@@ -7,12 +7,14 @@ email: Beneji125@gmail.com
 
 def game_start():
     '''
-    This function starts the game of TIC-TAC-TOE by calling on other functions.
+    This function contains and starts the game of TIC-TAC-TOE 
+    by calling on other functions.
     '''
 
     def separator():
           '''
-          This function creates a separator to make the code output more readable.
+          This function creates a separator to make the code output 
+          more readable and easier to follow.
           '''
 
           return "=" * 90
@@ -50,7 +52,7 @@ Let's start the game
     def grid_print():
       '''
       This function prints the grid of the game, 
-      so the players can see the state of the game.
+      so the players can see the current state of the game.
       '''
 
       print(f'''
@@ -73,38 +75,57 @@ Let's start the game
         
         if grid[1] == grid[2] == grid[3] != " ":
             grid_print()
-            print(f"Player {grid[1]} wins!")
+            separator()
+            print(f"Congratulations player {grid[1]} wins!")
+            separator()
             return True
         elif grid[4] == grid[5] == grid[6] != " ":
             grid_print()
-            print(f"Player {grid[4]} wins!")
+            separator()
+            print(f"Congratulations player {grid[4]} wins!")
+            separator()
             return True
         elif grid[7] == grid[8] == grid[9] != " ":
             grid_print()
-            print(f"Player {grid[7]} wins!")
+            print(separator()) 
+            print(f"Congratulations player {grid[7]} wins!")
+            print(separator()) 
             return True
         elif grid[1] == grid[4] == grid[7] != " ":
             grid_print()
-            print(f"Player {grid[1]} wins!")
+            print(separator()) 
+            print(f"Congratulations player {grid[1]} wins!")
+            print(separator()) 
             return True
         elif grid[2] == grid[5] == grid[8] != " ":
             grid_print()
-            print(f"Player {grid[2]} wins!")
+            print(separator()) 
+            print(f"Congratulations player {grid[2]} wins!")
+            print(separator()) 
             return True
         elif grid[3] == grid[6] == grid[9] != " ":
             grid_print()
-            print(f"Player {grid[3]} wins!")
+            print(separator()) 
+            print(f"Congratulations player {grid[3]} wins!")
+            print(separator()) 
             return True
         elif grid[1] == grid[5] == grid[9] != " ":
             grid_print()
-            print(f"Player {grid[1]} wins!")
+            print(separator()) 
+            print(f"Congratulations player {grid[1]} wins!")
+            print(separator()) 
             return True
         elif grid[3] == grid[5] == grid[7] != " ":
             grid_print()
-            print(f"Player {grid[3]} wins!")
+            print(separator()) 
+            print(f"Congratulations player {grid[3]} wins!")
+            print(separator()) 
             return True
         elif " " not in grid.values():
+            grid_print()
+            print(separator()) 
             print("It's a draw!")
+            print(separator()) 
             return True
         return False
 
@@ -113,7 +134,7 @@ Let's start the game
       '''
       This function goes through the players turns, alternating between player X
       and player O. It also checks if there is a winner or a draw using the 
-      win_checker definition.
+      win_checker function.
       '''
 
       player = "X"
@@ -146,4 +167,5 @@ Let's start the game
     game_introduction()
     player_turn()
 
-game_start()
+if __name__ == "__main__":
+    game_start()
