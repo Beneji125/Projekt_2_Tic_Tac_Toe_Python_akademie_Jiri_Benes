@@ -104,7 +104,7 @@ def player_turn(grid, player):
                 print(separator())
                 return  
 
-            if player_choice.isdigit():
+            elif player_choice.isdigit():
                 player_choice = int(player_choice)
 
                 if player_choice in grid and grid[player_choice] == " ":
